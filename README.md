@@ -16,25 +16,25 @@ esa-management-slack
 
 - `esa: 3 pay` ：支払いを記録する
   
-  ![https://gyazo.com/f5af685a40cc884ba47dea47bb733ca5](https://i.gyazo.com/f5af685a40cc884ba47dea47bb733ca5.png)
+  ![https://gyazo.com/16a301ea90cc82e378a4d29af6b301cf](https://i.gyazo.com/16a301ea90cc82e378a4d29af6b301cf.png)
   
 #### `esa: [month] unpay`
 
 - `esa: 3 unpay`: 支払いを取り消す
   
-  ![https://gyazo.com/989003d533cf23d29d82b420f8ec2012](https://i.gyazo.com/989003d533cf23d29d82b420f8ec2012.png)
+  ![https://gyazo.com/58b9b01dc451c6523005054b49f047ac](https://i.gyazo.com/58b9b01dc451c6523005054b49f047ac.png)
   
 #### `esa: [month] check`
 
 - `esa: 3 check`: 支払状況を確認する
   
-  ![https://gyazo.com/157c3ff8b75d94e0406f5a3e8be163a6](https://i.gyazo.com/157c3ff8b75d94e0406f5a3e8be163a6.png)
+  ![https://gyazo.com/0495e4577e05b21890d30d70668fbf80](https://i.gyazo.com/0495e4577e05b21890d30d70668fbf80.png)
   
 #### `esa: [month] all`
 
 - `esa: 3 all`: メンバー全員の支払状況サマリーを確認する
   
-  ![https://gyazo.com/5a2085a7ada6b71a6bc79863a67f8b65](https://i.gyazo.com/5a2085a7ada6b71a6bc79863a67f8b65.png)
+  ![https://gyazo.com/f0a812436923d949ad11e090f327ac28](https://i.gyazo.com/f0a812436923d949ad11e090f327ac28.png)
   
 
 ### 毎月末のリマインド
