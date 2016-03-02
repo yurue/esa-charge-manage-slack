@@ -24,13 +24,13 @@ esa-management-slack
   
   ![https://gyazo.com/989003d533cf23d29d82b420f8ec2012](https://i.gyazo.com/989003d533cf23d29d82b420f8ec2012.png)
   
-### `esa: [month] check`
+#### `esa: [month] check`
 
 - `esa: 3 check`: 支払状況を確認する
   
   ![https://gyazo.com/157c3ff8b75d94e0406f5a3e8be163a6](https://i.gyazo.com/157c3ff8b75d94e0406f5a3e8be163a6.png)
   
-### `esa: [month] all`
+#### `esa: [month] all`
 
 - `esa: 3 all`: メンバー全員の支払状況サマリーを確認する
   
