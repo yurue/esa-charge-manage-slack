@@ -164,11 +164,11 @@ function getMonth() {
 
   //TriggerWords(esa:)を削除 -> 空白でsplit
   textArray = text.substr(5).split(' '); // [0] -> month, [1]-> option(pay, unpay, check, all)
-  month = textArray[0];
+  month = Number(textArray[0]);
   var option = textArray[1];
 
   // 表の対象部分を特定
-  rowNum = textArray[0];
+  rowNum = month;
   columnNum = column[userName];
 
   // スプレッドシートから表を取得
