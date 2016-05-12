@@ -163,9 +163,9 @@ function getMonth() {
   }
 
   //TriggerWords(esa:)を削除 -> 空白でsplit
-  textArray = text.substr(5).split(' '); // [0] -> month, [1]-> option(pay, unpay, check, all)
-  month = Number(textArray[0]);
-  var option = textArray[1];
+  textArray = text.substr(5).split(' '); // [0] -> option(pay, unpay, check, all), [1]-> month
+  var option = textArray[0];
+  month = Number(textArray[1]);
 
   // 表の対象部分を特定
   rowNum = month;
@@ -176,7 +176,7 @@ function getMonth() {
 
   var message = '';
 
-  if (option == "pay") {
+  if (option == 'pay') {
     message = setPay();
     notificationSetPay();
 
