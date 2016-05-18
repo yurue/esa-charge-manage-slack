@@ -36,6 +36,11 @@ esa-charge-manage-slack
   
   [![https://gyazo.com/2e67b3511c4e52b413848714036cc15c](https://i.gyazo.com/2e67b3511c4e52b413848714036cc15c.png)](https://gyazo.com/2e67b3511c4e52b413848714036cc15c)
   
+#### `esa: help`
+
+- `esa: help`: ヘルプを参照する
+
+  [![https://gyazo.com/df5b572dcb3c83a1b2c5e7c4c9483a60](https://i.gyazo.com/df5b572dcb3c83a1b2c5e7c4c9483a60.png)](https://gyazo.com/df5b572dcb3c83a1b2c5e7c4c9483a60)
 
 ### 毎月末のリマインド
 
