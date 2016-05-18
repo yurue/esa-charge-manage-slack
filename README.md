@@ -12,35 +12,35 @@ esa-charge-manage-slack
 
 
 
-#### `esa: pay [month] ` 
+#### `esa pay [month] ` 
 
-- `esa: pay 5` ：支払いを記録する
+- `esa pay 5` ：支払いを記録する
   
-  [![https://gyazo.com/c96caadbb61573ebf99acf02b6f5ac33](https://i.gyazo.com/c96caadbb61573ebf99acf02b6f5ac33.png)](https://gyazo.com/c96caadbb61573ebf99acf02b6f5ac33)
+  [![https://gyazo.com/849b32d8a422ead95e50865d247c5730](https://i.gyazo.com/849b32d8a422ead95e50865d247c5730.png)](https://gyazo.com/849b32d8a422ead95e50865d247c5730)
   
-#### `esa: unpay [month]`
+#### `esa unpay [month]`
 
-- `esa: unpay 5`: 支払いを取り消す
+- `esa unpay 5`: 支払いを取り消す
   
-  [![https://gyazo.com/911578a80607dda26c9c357bc7f91b64](https://i.gyazo.com/911578a80607dda26c9c357bc7f91b64.png)](https://gyazo.com/911578a80607dda26c9c357bc7f91b64)
+  [![https://gyazo.com/a54edf55fb362411c40b79015b23b4f1](https://i.gyazo.com/a54edf55fb362411c40b79015b23b4f1.png)](https://gyazo.com/a54edf55fb362411c40b79015b23b4f1)
   
-#### `esa: check [month]`
+#### `esa check [month]`
 
-- `esa: check 5`: 支払状況を確認する
+- `esa check 5`: 支払状況を確認する
   
-  [![https://gyazo.com/247091baad00f8ced1b985f0ccd84753](https://i.gyazo.com/247091baad00f8ced1b985f0ccd84753.png)](https://gyazo.com/247091baad00f8ced1b985f0ccd84753)
+  [![https://gyazo.com/e429b49b2bcfde779ccfd1d862c852f1](https://i.gyazo.com/e429b49b2bcfde779ccfd1d862c852f1.png)](https://gyazo.com/e429b49b2bcfde779ccfd1d862c852f1)
   
-#### `esa: all [month]`
+#### `esa all [month]`
 
-- `esa: all 5`: メンバー全員の支払状況サマリーを確認する
+- `esa all 5`: メンバー全員の支払状況サマリーを確認する
   
-  [![https://gyazo.com/2e67b3511c4e52b413848714036cc15c](https://i.gyazo.com/2e67b3511c4e52b413848714036cc15c.png)](https://gyazo.com/2e67b3511c4e52b413848714036cc15c)
+  [![https://gyazo.com/b997e0f27e5be07c962baf7c0d7fd914](https://i.gyazo.com/b997e0f27e5be07c962baf7c0d7fd914.png)](https://gyazo.com/b997e0f27e5be07c962baf7c0d7fd914)
   
-#### `esa: help`
+#### `esa help`
 
-- `esa: help`: ヘルプを参照する
+- `esa help`: ヘルプを参照する
 
-  [![https://gyazo.com/df5b572dcb3c83a1b2c5e7c4c9483a60](https://i.gyazo.com/df5b572dcb3c83a1b2c5e7c4c9483a60.png)](https://gyazo.com/df5b572dcb3c83a1b2c5e7c4c9483a60)
+  [![https://gyazo.com/8134a2eebe0e4c6c066932c85039cbfe](https://i.gyazo.com/8134a2eebe0e4c6c066932c85039cbfe.png)](https://gyazo.com/8134a2eebe0e4c6c066932c85039cbfe)
 
 ### 毎月末のリマインド
 
