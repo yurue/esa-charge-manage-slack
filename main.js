@@ -92,10 +92,10 @@ function checkPayment() {
 function postHelp() {
   var message =
     '【esaコマンドのつかいかた】\n' +
-    '`esa: pay [month]` \t\t 支払いを記録する  \n' +
-    '`esa: unpay [month]` \t\t 支払いを取り消す  \n' +
-    '`esa: check [month]` \t\t 支払状況を確認する  \n' +
-    '`esa: pay [month]` \t\t メンバー全員の支払状況サマリーを確認する  \n';
+    '`esa pay [month]` \t\t 支払いを記録する  \n' +
+    '`esa unpay [month]` \t\t 支払いを取り消す  \n' +
+    '`esa check [month]` \t\t 支払状況を確認する  \n' +
+    '`esa pay [month]` \t\t メンバー全員の支払状況サマリーを確認する  \n';
     return message;
 }
 
