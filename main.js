@@ -3,7 +3,8 @@ var column = {
   'yamotech': 2,
   'msk6252': 3,
   'yuto': 4,
-  'sum': 5
+  'tsuyoposon': 5,
+  'sum': 6
 }
 
 var column_inverse = {
@@ -11,7 +12,8 @@ var column_inverse = {
   2 : 'yamotech',
   3 : 'msk6252',
   4 : 'yuto',
-  5 : 'sum'
+  5 : 'tsuyoposon',
+  6 : 'sum'
 }
 
 var sheet;
@@ -27,6 +29,12 @@ var columnNum;
 function getPaymentSheet() {
   var ss = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/1N497DzBlRkrSmLYPTRIb2-tp5gvIxK9fksZlqfccDg4/edit#gid=0');
   return ss.getSheets()[0];
+}
+
+function getTable() {
+  // 18行目2列目から13行・7列分取得
+  // メンバー増減の際に調整
+  return sheet.getSheetValues(18,2,13,7);
 }
 
 function postSlackMessage(content, channelId) {
@@ -67,7 +75,7 @@ function setUnpay() {
 }
 
 function checkPayment() {
-  var paymentArray = sheet.getSheetValues(18,2,13,6);
+  var paymentArray = getTable();
   var result = paymentArray[rowNum][columnNum];
 
   var message;
@@ -81,8 +89,18 @@ function checkPayment() {
   return message;
 }
 
+function postHelp() {
+  var message =
+    '【esaコマンドのつかいかた】\n' +
+    '`esa: pay [month]` \t\t 支払いを記録する  \n' +
+    '`esa: unpay [month]` \t\t 支払いを取り消す  \n' +
+    '`esa: check [month]` \t\t 支払状況を確認する  \n' +
+    '`esa: pay [month]` \t\t メンバー全員の支払状況サマリーを確認する  \n';
+    return message;
+}
+
 function isPay() {
-  var paymentArray = sheet.getSheetValues(18,2,13,6);
+  var paymentArray = getTable();
   var result = paymentArray[rowNum][columnNum];
   if (result) {
     // 既に支払い済みであれば
@@ -94,7 +112,7 @@ function isPay() {
 }
 
 function checkAll() {
-  var paymentArray = sheet.getSheetValues(18,2,13,6);
+  var paymentArray = getTable();
   var result = [];
   var columnLenght = paymentArray[rowNum].length - 2;
   var okCount = 0;
@@ -120,6 +138,7 @@ function checkAll() {
   'yamotech:   ' + result[1] + ' \n' +
   'msk6252:    ' + result[2] + ' \n' +
   'yuto:       ' + result[3] + ' \n' +
+  'tsuyoposon: ' + result[4] + ' \n' +
   '---------------------------------------------\n' +
   ':moneybag: :' + sum + '円\n' +
   ':chart_with_upwards_trend: :' + collectionRate + '% だっぴよ〜〜！';
@@ -127,7 +146,7 @@ function checkAll() {
 }
 
 function checkUnpaid() {
-  var paymentArray = sheet.getSheetValues(18,2,13,6);
+  var paymentArray = getTable();
   var unpaidMenbers = [];
   var columnLenght = paymentArray[rowNum].length - 2;
 
@@ -188,6 +207,9 @@ function getMonth() {
 
   } else if(option == 'all') {
     message = checkAll();
+
+  } else if(option == 'help') {
+    message = postHelp();
 
   } else {
     message = '入力ミスかな？読み取れないっぴ。:thinking_face:';
