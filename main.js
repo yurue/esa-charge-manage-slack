@@ -2,8 +2,8 @@ var column = {
   'konnobu': 1,
   'yamotech': 2,
   'msk6252': 3,
-  'yuto': 4,
-  'tsuyoposon': 5,
+  'tsuyoposon': 4,
+  'k.shimomura': 5,
   'sum': 6
 }
 
@@ -11,8 +11,8 @@ var column_inverse = {
   1 : 'konnobu',
   2 : 'yamotech',
   3 : 'msk6252',
-  4 : 'yuto',
-  5 : 'tsuyoposon',
+  4 : 'tsuyoposon',
+  5 : 'k.shimomura',
   6 : 'sum'
 }
 
@@ -46,10 +46,11 @@ function postSlackMessage(content, channelId) {
     channelId: channelId,
     userName: "yuruko-esa",
     message: content,
-    iconUrl: botIcon
+    iconUrl: botIcon,
+    link_names: true
   };
 
-  slackApp.postMessage(options.channelId, options.message, {username: options.userName, icon_url: options.iconUrl});
+  slackApp.postMessage(options.channelId, options.message, {username: options.userName, icon_url: options.iconUrl, link_names: options.link_names});
 }
 
 function setPay() {
@@ -137,8 +138,8 @@ function checkAll() {
   'konobu:     ' + result[0] + ' \n' +
   'yamotech:   ' + result[1] + ' \n' +
   'msk6252:    ' + result[2] + ' \n' +
-  'yuto:       ' + result[3] + ' \n' +
-  'tsuyoposon: ' + result[4] + ' \n' +
+  'tsuyoposon:       ' + result[3] + ' \n' +
+  'k.shimomura: ' + result[4] + ' \n' +
   '---------------------------------------------\n' +
   ':moneybag: :' + sum + '円\n' +
   ':chart_with_upwards_trend: :' + collectionRate + '% だっぴよ〜〜！';
