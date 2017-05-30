@@ -96,7 +96,7 @@ function postHelp() {
     '`esa pay [month]` \t\t 支払いを記録する  \n' +
     '`esa unpay [month]` \t\t 支払いを取り消す  \n' +
     '`esa check [month]` \t\t 支払状況を確認する  \n' +
-    '`esa pay [month]` \t\t メンバー全員の支払状況サマリーを確認する  \n';
+    '`esa all [month]` \t\t メンバー全員の支払状況サマリーを確認する  \n';
     return message;
 }
 
@@ -182,8 +182,8 @@ function getMonth() {
     throw new Error("invalid token.");
   }
 
-  //TriggerWords(esa:)を削除 -> 空白でsplit
-  textArray = text.substr(5).split(' '); // [0] -> option(pay, unpay, check, all), [1]-> month
+  //TriggerWords(esa)を削除 -> 空白でsplit
+  textArray = text.substr(4).split(' '); // [0] -> option(pay, unpay, check, all), [1]-> month
   var option = textArray[0];
   month = Number(textArray[1]);
 
