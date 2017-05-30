@@ -27,7 +27,8 @@ var rowNum;
 var columnNum;
 
 function getPaymentSheet() {
-  var ss = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/1N497DzBlRkrSmLYPTRIb2-tp5gvIxK9fksZlqfccDg4/edit#gid=0');
+  var sheet = PropertiesService.getScriptProperties().getProperty('PAYMENT_SHEET');
+  var ss = SpreadsheetApp.openByUrl(sheet);
   return ss.getSheets()[0];
 }
 
@@ -96,7 +97,8 @@ function postHelp() {
     '`esa pay [month]` \t\t 支払いを記録する  \n' +
     '`esa unpay [month]` \t\t 支払いを取り消す  \n' +
     '`esa check [month]` \t\t 支払状況を確認する  \n' +
-    '`esa all [month]` \t\t メンバー全員の支払状況サマリーを確認する  \n';
+    '`esa all [month]` \t\t メンバー全員の支払状況サマリーを確認する  \n' +
+    '`esa get_sheet` \t\t esaの支払状況を管理しているスプレッドシートのURLを投げる \n';
     return message;
 }
 
@@ -135,15 +137,19 @@ function checkAll() {
   var message =
   '【' + month + '月のesa集め状況】\n' +
   '--------------------------------------------\n' +
-  'konobu:     ' + result[0] + ' \n' +
-  'yamotech:   ' + result[1] + ' \n' +
-  'msk6252:    ' + result[2] + ' \n' +
-  'tsuyoposon:       ' + result[3] + ' \n' +
+  'konobu:      ' + result[0] + ' \n' +
+  'yamotech:    ' + result[1] + ' \n' +
+  'msk6252:     ' + result[2] + ' \n' +
+  'tsuyoposon:  ' + result[3] + ' \n' +
   'k.shimomura: ' + result[4] + ' \n' +
   '---------------------------------------------\n' +
   ':moneybag: :' + sum + '円\n' +
   ':chart_with_upwards_trend: :' + collectionRate + '% だっぴよ〜〜！';
   return message;
+}
+
+function getSheetUrl() {
+  return PropertiesService.getScriptProperties().getProperty('PAYMENT_SHEET');
 }
 
 function checkUnpaid() {
@@ -208,6 +214,9 @@ function getMonth() {
 
   } else if(option == 'all') {
     message = checkAll();
+
+  } else if(option == 'get_sheet') {
+    message = getSheetUrl();
 
   } else if(option == 'help') {
     message = postHelp();
